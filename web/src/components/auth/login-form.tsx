@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/toast";
 import { cn } from "@/lib/utils";
-import { API_BASE_URL } from "@/lib/api";
+import { authApi } from "@/lib/api";
 import { setAuthToken } from "@/lib/auth-token";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -47,31 +47,25 @@ export function AuthForm({ mode: initialMode = "login" }: AuthFormProps) {
     setIsLoading(true);
 
     try {
-      const path = mode === "login" ? "/auth/login" : "/auth/register";
-      const response = await fetch(`${API_BASE_URL}${path}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(
-          mode === "login"
-            ? { email, password }
-            : { email, password, username: email.split("@")[0], full_name: "" }
-        ),
-      });
+      const data =
+        mode === "login"
+          ? await authApi.login({ email, password })
+          : await authApi.register({
+              email,
+              password,
+              username: email.split("@")[0],
+              full_name: "",
+            });
 
-      if (!response.ok) {
-        const error = await response.json();
-        toast.error(error.detail || `${mode === "login" ? "Login" : "Signup"} failed`);
-        return;
-      }
-
-      const data = await response.json();
       setAuthToken(data.access_token);
       toast.success(`${mode === "login" ? "Logged in" : "Account created"}!`);
       router.push("/");
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
+      const message =
+        error instanceof Error
+          ? error.message
+          : `${mode === "login" ? "Login" : "Signup"} failed`;
+      toast.error(message || "Something went wrong. Please try again.");
       console.error(error);
     } finally {
       setIsLoading(false);
