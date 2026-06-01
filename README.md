@@ -3,7 +3,8 @@
 A deployment-ready Kanban task manager engineered for fast execution, reliable state transitions, and a polished product experience.
 
 ## Demo
-- Live App: [Frontend URL Placeholder](https://your-frontend-url.com)
+- Live App: [Frontend (deployed)](https://indpro-task-manager-kanban.vercel.app/auth)
+- Backend (deployed): [Render API](https://indpro-task-manager-8cx8.onrender.com)
  - API Root: [Backend Root](https://indpro-task-manager-8cx8.onrender.com/)
  - API Base URL: [Backend API](https://indpro-task-manager-8cx8.onrender.com/api)
  - API Docs (Swagger): [Docs](https://indpro-task-manager-8cx8.onrender.com/docs)
