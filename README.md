@@ -5,12 +5,6 @@ A deployment-ready Kanban task manager engineered for fast execution, reliable s
 ## Demo
 - Live App: [Frontend URL Placeholder](https://your-frontend-url.com)
 - API Base URL: [Backend URL Placeholder](https://your-backend-url.com/api)
-- API Docs (Swagger): [Docs URL Placeholder](https://your-backend-url.com/docs)
-
-## Screenshots
-- Board Overview: ![Board Overview](./docs/screenshots/board-overview.png)
-- Auth (Login/Register): ![Auth](./docs/screenshots/auth.png)
-- Edit + Drag & Drop: ![Task Interactions](./docs/screenshots/task-interactions.png)
 
 ## Core Features
 - Authentication: Register and login with JWT-based auth.
