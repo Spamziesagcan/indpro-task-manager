@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/toast";
 import { cn } from "@/lib/utils";
+import { API_BASE_URL } from "@/lib/api";
 import { setAuthToken } from "@/lib/auth-token";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -46,8 +47,8 @@ export function AuthForm({ mode: initialMode = "login" }: AuthFormProps) {
     setIsLoading(true);
 
     try {
-      const endpoint = mode === "login" ? "/api/auth/login" : "/api/auth/register";
-      const response = await fetch(`http://127.0.0.1:8000${endpoint}`, {
+      const path = mode === "login" ? "/auth/login" : "/auth/register";
+      const response = await fetch(`${API_BASE_URL}${path}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
