@@ -1,6 +1,6 @@
 import { getAuthToken } from "@/lib/auth-token";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000/api";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://indpro-task-manager-8cx8.onrender.com/api";
 
 type ApiOptions = Omit<RequestInit, "body"> & {
   body?: unknown;
