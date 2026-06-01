@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+:root {
+  --background: #070b14;
+  --foreground: #f5f7fb;
+  --surface: rgba(15, 23, 42, 0.72);
+  --surface-elevated: rgba(17, 24, 39, 0.88);
+  --surface-strong: #111827;
+  --surface-muted: rgba(148, 163, 184, 0.08);
+  --surface-overlay: rgba(2, 6, 23, 0.82);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --muted: #94a3b8;
+  --muted-foreground: #9ca3af;
+  --accent: #7c8cff;
+  --accent-strong: #5b6bff;
+  --accent-soft: rgba(124, 140, 255, 0.12);
+  --success: #34d399;
+  --warning: #fbbf24;
+  --destructive: #f87171;
+  --ring: rgba(124, 140, 255, 0.5);
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-strong: var(--surface-strong);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-overlay: var(--surface-overlay);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 0.125rem);
+  --radius-sm: calc(var(--radius) - 0.25rem);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(124, 140, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.16), transparent 24%),
+    linear-gradient(180deg, #0a0f1d 0%, #070b14 100%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  background: rgba(124, 140, 255, 0.32);
+}
+
+* {
+  border-color: var(--border);
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.88), rgba(15, 23, 42, 0.72));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.glass-panel-strong {
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(2, 6, 23, 0.92));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
