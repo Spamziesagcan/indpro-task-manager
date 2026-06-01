@@ -10,11 +10,6 @@ A deployment-ready Kanban task manager engineered for fast execution, reliable s
  - API Docs (Swagger): [Docs](https://indpro-task-manager-8cx8.onrender.com/docs)
  - OpenAPI JSON: [openapi.json](https://indpro-task-manager-8cx8.onrender.com/openapi.json)
 
-## Screenshots
-- Board Overview: ![Board Overview](./docs/screenshots/board-overview.png)
-- Auth (Login/Register): ![Auth](./docs/screenshots/auth.png)
-- Edit + Drag & Drop: ![Task Interactions](./docs/screenshots/task-interactions.png)
-
 ## Core Features
 - Authentication: Register and login with JWT-based auth.
 - Task CRUD: Create, update, delete tasks with backend persistence.
