@@ -18,10 +18,10 @@ import {
 import { cn } from "@/lib/utils";
 import { EmptyColumnState } from "@/components/kanban/board-states";
 import SortableTask from "@/components/kanban/sortable-task";
-import type { Task } from "@/stores/useTasks";
+import type { Task, Status } from "@/stores/useTasks";
 
 type ColumnProps = {
-  columnId: string;
+  columnId: Status;
   columnTitle: string;
   columnAccent: string;
   icon: React.ComponentType<{ className?: string }>;
@@ -32,7 +32,7 @@ type ColumnProps = {
   onEdit: (task: Task) => void;
   onDelete: (taskId: string) => void;
   onSelect: (taskId: string) => void;
-  onCreateClick: (columnId: string) => void;
+  onCreateClick: (columnId: Status) => void;
 };
 
 export function Column({

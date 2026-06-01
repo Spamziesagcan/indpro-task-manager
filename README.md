@@ -4,8 +4,10 @@ A deployment-ready Kanban task manager engineered for fast execution, reliable s
 
 ## Demo
 - Live App: [Frontend URL Placeholder](https://your-frontend-url.com)
-- API Base URL: [Backend URL Placeholder](https://your-backend-url.com/api)
-- API Docs (Swagger): [Docs URL Placeholder](https://your-backend-url.com/docs)
+- API Root: [Backend Root](https://indpro-task-manager-8cx8.onrender.com/)
+- API Base URL: [Backend API](https://indpro-task-manager-8cx8.onrender.com/api)
+- API Docs (Swagger): [Docs](https://indpro-task-manager-8cx8.onrender.com/docs)
+- OpenAPI JSON: [openapi.json](https://indpro-task-manager-8cx8.onrender.com/openapi.json)
 
 ## Screenshots
 - Board Overview: ![Board Overview](./docs/screenshots/board-overview.png)
